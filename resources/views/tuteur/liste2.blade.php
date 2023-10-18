@@ -31,6 +31,7 @@
                                 <th>#</th>
                                 <th>Nom</th>
                                 <th>Prenom</th>
+                                <th>etudiant</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -41,6 +42,12 @@
                                 <td>{{ $tuteur->id }}</td>
                                 <td>{{ $tuteur->nom }}</td>
                                 <td>{{ $tuteur->prenom }}</td>
+                                <td>
+                                @foreach($tuteur->etudiants as $etudiant)
+                                 
+                               {{ $etudiant->nom }}   {{ $etudiant->prenom }} <br>
+                                @endforeach
+                            </td>
                                 <td>
                                     <a
                                         href="/update-tuteur/{{ $tuteur->id }}"

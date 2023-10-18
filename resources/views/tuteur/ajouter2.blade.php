@@ -39,6 +39,17 @@
                 <input type="text" class="form-control" id="Prenom" name="prenom">
               </div>
               <br> 
+              
+              {{-- <div class="form-floating">
+                <div><label for="tuteur" class="form-label">Tuteur</label></div>
+                <select class="form-select" id="tuteur" aria-label="Floating label select example" name="tuteur">
+                @foreach($tuteurs as $tuteur)
+                <option value="{{$tuteur->id}}">{{$tuteur->nom}} {{$tuteur->prenom}}</option>
+                @endforeach
+                </select>
+                </div>
+               --}}
+              
             <button type="submit" class="btn btn-primary">AJOUTER UN TUTEUR</button>
             <br> <br> 
             <a href="/tuteur" class="btn btn-danger">Revenir à liste des tuteurs</a>

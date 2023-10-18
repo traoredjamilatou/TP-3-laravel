@@ -19,9 +19,6 @@ return new class extends Migration
             $table->string('classe');
             $table->string('images');
             $table->timestamps();
-            
-             //$table->unsignedBigInteger('tuteur_id');
-            //$table->foreign('tuteur_id')->references('id')->on('tuteurs');
            $table->foreignId('tuteur_id')->constrained()->oneDelete('cascade');
         });
     }

@@ -34,8 +34,8 @@
                                 <th>Nom</th>
                                 <th>Prenom</th>
                                 <th>Classe</th>
-                                <th>Images</th>
                                 <th>Tuteur</th>
+                                <th>Images</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -47,12 +47,9 @@
                                 <td>{{ $etudiant->nom }}</td>
                                 <td>{{ $etudiant->prenom }}</td>
                                 <td>{{ $etudiant->classe }}</td>
-                                <td>{{ $etudiant->images }}</td>
-                                <td>{{ $etudiant->tuteur->nom }}</td>
-
-                                <td>
-                                    {{-- {{ $etudiant->image ? $etudiant->image->etudiant_id : " pas d'image " }} --}}
-                                </td>
+                                <td>{{ $etudiant->tuteur->nom }} {{$etudiant->tuteur->prenom}}</td>
+                                <td> <img src="/images/{{ $etudiant->images }}" alt="" style="width: 60px; height:60px; border-raduis:50px;"> </td>
+                                
                                 <td>
                                     <a
                                         href="/update-etudiant/{{ $etudiant->id }}"

@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->timestamps();
+            $table->foreignId('etudiant_id')->constrained()->oneDelete('cascade');
+            
         });
     }
 

@@ -50,6 +50,7 @@
                 <input type="file" class="form-control" id="images" name="images" value="{{$etudiants->images}}">
               </div>
               <br> 
+             
             <button type="submit" class="btn btn-primary">MODIFIER UN ETUDIANT</button>
             <br> <br> 
             <a href="/etudiant" class="btn btn-danger">Revenir à liste des etudiants</a>

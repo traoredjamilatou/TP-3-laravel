@@ -27,7 +27,7 @@
             @endforeach
         </ul>
        
-        <form action="/update/traitement" method="POST" class="form-group">
+        <form action="/update2/traitement" method="POST" class="form-group">
         @csrf
         
         <input type="text" name="id" style="display: none;" value="{{$tuteurs->id}}">
@@ -40,7 +40,13 @@
                 <label for="Prenom">Prenom</label>
                 <input type="text" class="form-control" id="Prenom" name="prenom" value="{{$tuteurs->prenom}}">
               </div>
+              <div class="form-group">
+                <label for="etudiant">Etudiant</label>
+                <input type="text" class="form-control" id="etudiant" name="etudiant" value="{{$tuteurs->etudiant}}">
+              </div>
               <br> 
+              
+              
             <button type="submit" class="btn btn-primary">MODIFIER UN TUTEUR</button>
             <br> <br> 
             <a href="/tuteur" class="btn btn-danger">Revenir à liste des tuteurs</a>

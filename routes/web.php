@@ -19,7 +19,7 @@ use App\Http\Controllers\TuteurController;
 
 Route::get('/delete-tuteur/{id}', [TuteurController::class, 'delete_tuteur']);
 Route::get('/update-tuteur/{id}', [TuteurController::class, 'update_tuteur']);
-Route::post('/update/traitement',[TuteurController::class, 'update_tuteur_traitement']);
+Route::post('/update2/traitement',[TuteurController::class, 'update_tuteur_traitement']);
 Route::get('/tuteur',[TuteurController::class, 'liste2_tuteur']);
 Route::get('/ajouter2',[TuteurController::class, 'ajouter2_tuteur']);
 Route::post('/ajouter2/traitement',[TuteurController::class, 'ajouter2_tuteur_traitement']);
