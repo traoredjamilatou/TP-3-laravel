@@ -46,7 +46,7 @@
                 <input type="text" class="form-control" id="Classe" name="classe" value="{{$etudiants->classe}}">
               </div>
               <div class="form-group">
-                <label for="Classe">Images</label>
+                <label for="images">Images</label>
                 <input type="file" class="form-control" id="images" name="images" value="{{$etudiants->images}}">
               </div>
               <br> 

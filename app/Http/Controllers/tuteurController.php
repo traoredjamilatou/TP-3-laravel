@@ -15,6 +15,7 @@ class TuteurController extends Controller
     
     public function ajouter2_tuteur()
     {
+        // $etudiants = Etudiant::all();
         return view('tuteur.ajouter2');
     }
     
@@ -23,12 +24,14 @@ class TuteurController extends Controller
         $request->validate([
             'nom'=> 'required',
             'prenom'=> 'required',
-            
+            'etudiant'=> 'required',
+
         ]);
         
         $tuteur = new Tuteur();
         $tuteur->nom = $request->nom;
         $tuteur->prenom = $request->prenom;
+        $tuteur->etudiant_id = $request->etudiant;
         $tuteur->save();
         
         return redirect('/ajouter2')->with('status', 'L\'tuteur a bien été ajouté avec succes.');
@@ -45,12 +48,14 @@ class TuteurController extends Controller
         $request->validate([
             'nom'=> 'required',
             'prenom'=> 'required',
+            'etudiant'=> 'required',
            
 
         ]);
         $tuteur = Tuteur::find($request->id);
         $tuteur->nom = $request->nom;
         $tuteur->prenom = $request->prenom;
+        $tuteur->etudiant = $request->etudiant;
        
         $tuteur->update();
         
